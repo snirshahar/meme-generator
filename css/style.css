@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* .choice-wrapper {
+    height: 50%;
+    background: #323232;
+} */
+  
+  body {
+    width: 100%;
+    background-color:white; 
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.head-page{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    background: #323232;
+    color: white;
+    font-family: Lato;
+    height: 190px;
+    
+  }
+  
+  nav{
+    background: #323232
+  }
+
+  h1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .words li {
+    color: rgb(79, 37, 148);
+    text-decoration: none;
+    display: block;
+    line-height: 130px;
+    height: 130px;
+    /* width: 8.4375rem; */
+    text-align: center;
+    cursor: pointer;
+  }
+
+  
+.container{
+    display: grid;
+    grid-template-columns: repeat(10, 100px);
+    grid-column-gap: 5px;
+    margin-top: 20;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    width: 1040px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .item{
+    grid-column: span 2;
+    width: 200px;
+  }
+  
+.item *{
+    visibility: visible
+}
+
+form { 
+    max-width:420px; 
+    margin:0 auto; 
+    font-family: Maven-pro;
+    padding: 50px 20px; 
+  }
+  
+  ul{
+    display: flex;
+    justify-content:space-between; 
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    
+}
+
+li{
+display: flex;
+justify-content: space-between;
+}
