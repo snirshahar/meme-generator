@@ -13,7 +13,7 @@ function renderImages() {
         var img = imgs[i];
         strHtml += `<div class="item">
                     <a class="gallery-item" href="canvas-editor.html" onclick= "onSaveImg(${img.id})" >
-                    <img src="./img/${img.id}.jpg" alt=""></a>
+                    <img src="./img1/${img.id}.jpg" alt=""></a>
                 </div>`
     }
     var elGallery = document.querySelector('.container');
