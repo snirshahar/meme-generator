@@ -40,19 +40,12 @@ function doUploadImg(elForm, onSuccess) {
       })
 }
 
-function switchLines() {
-   // document.querySelector('')
-   // gMeme.txts[0].line = gMeme.txts[1].line
-}
-
-
 function clearCanvas() {
    gMeme.txts[0].line = 'Enter Text Here';
    gMeme.txts[1].line = 'Enter Text Here';
    renderTxtsEditor();
    createCanvas();
 }
-
 
 function handleImageFromInput(ev, onImageReady) {
    document.querySelector('.share-container').innerHTML = ''

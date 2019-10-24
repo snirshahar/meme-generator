@@ -15,8 +15,7 @@ function renderTxtsEditor() {
                   <p>
                   <input type="text" data-property="line" placeholder="${txt.line}" oninput="editTxt(this,${idx})">
                   <div class="opt-div1">
-                  <button class="" onclick="">Switch</button>
-                  <button  data-trans="addLine" class="btn"onclick="newTxtBtnClicked()">
+                  <button class="btn"onclick="newTxtBtnClicked()">
                   <i class="fas fa-plus"></i> Add Line
                     </button>
                     <button class="clear" onclick="clearCanvas()">Clear</button>
