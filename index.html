@@ -5,38 +5,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Style -->
+  <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utils.css">
   <title>Snir's Meme Generator</title>
 </head>
 
 <body onload="onInit()">
 
-  <header class="header">
-    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <ul class="menu">
-      <li><a href="#gallery">GALLERY</a></li>
-      <li><a href="#keywords">KEYWORDS</a></li>
-      <li><a href="#head">SEARCH</a></li>
-      <li><a href="#about">ABOUT</a></li>
-    </ul>
+  <header>
+    <div class="header-container flex space-between align-center">
+      <img src="img/layer-2.png" srcset="img/layer-2@2x.png 2x,
+             img/layer-2@3x.png 3x" class="Layer-2">
+      <li><a href="index.html">GALLERY</a></li>
+      <li><a class="nav-link js-scroll-trigger"  href="#about">ABOUT</a></li>
+    </div>
   </header>
 
-  <section id="head" class="head-page flex">
-    <h1>Snir's Ultimate Meme Creator</h1>
-    <!-- <input type="text" oninput="onSetFilter(this)" onkeyup="runScript(event)" onclick=""> -->
-  </section>
-
-  <div id="keywords" class="search-container">
-    <ul class="key-words-list flex words clean-list wrap align-both">
-    </ul>
+  <div class="second-nav" style="display: flex; ;flex-direction: row; align-items: center;">
+    <div id="keywords">
+      <ul class="key-words-list flex words clean-list align-both">
+      </ul>
+      <input type="text" placeholder="Enter search word" oninput="onSetFilter(this)" onkeyup="runScript(event)"
+        onclick="">
+    </div>
   </div>
+
   <section id="gallery" class="container">
 
   </section>
 
 
-  <footer>
+  <!-- Me -->
+  <section class="bg-light" id="about" style="padding: 0px;">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="img/profile.png" alt="">
+        </div>
+      </div>
+      <div class="col-sm-8 flex-align-center">
+        <h4>Snir Shahar</h4>
+        <p class="large about-description">Hello, my name is Snir Shahar and this is some info about me:
+          lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad
+          perspiciatis,
+          totam corporis ea, alias ut unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
+          laboriosam veritatis, quos non quis ad perspiciatis,
+          totam corporis ea, alias ut unde.</p>
 
+
+        <div class="container">
+          <div class="contact-ways">
+            <section class="contact-ways flex align-center justify-center">
+              <div class="col-md-4 flex-align-center">
+                </a>
+              </div>
+              <div class="col-md-4 flex-align-center">
+                <ul class="list-inline social-buttons flex-align-center">
+                  <li class="list-inline-item flex-align-center">
+                  <li class="list-inline-item flex-align-center">
+                    <a href="https://www.facebook.com/snir.shahar">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://github.com/snirshahar">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/snir.shahar">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <img src="img/layer-2.png" srcset="img/layer-2@2x.png 2x,
+                img/layer-2@3x.png 3x" class="Layer-2-footer">
+    <h5 class="footer-rights">All rights reserved 2019</h5>
   </footer>
 
   <script src="js/utils.js"></script>

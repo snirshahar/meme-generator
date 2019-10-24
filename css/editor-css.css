@@ -1,19 +1,43 @@
 
 * {
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
 
+.header-container {
+    height: 66px;
+    background-color: #ff7f00;
+    list-style: none;
+    }
+    
+.header-container a {
+    width: 60px;
+    height: 15px;
+    font-family: Montserrat;
+    font-size: 19px;
+    margin-right: 57px;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+    
+    .Layer-2 {
+        width: 133px;
+        height: 22px;
+        object-fit: contain;
+        margin: 24px 20px;
+        margin-left: 49px;
+    }
 .container {
     max-width: 980px;
     margin: 0 auto;
   }
   
-  /* .main-wrapper {
+  .main-wrapper {
     border-right: 1px solid #e1e0e0;
     border-left: 1px solid #e1e0e0;
     padding: 20px;
-  } */
+  }
   
   .nav-bar {
     width: 100vw;
@@ -46,7 +70,7 @@
 
 .choice-wrapper {
   height: 50%;
-  background: #323232;
+  background: #e3e3e3;
 }
 
 input[type=text] {
@@ -55,7 +79,156 @@ input[type=text] {
   margin: 6px 0;
   box-sizing: border-box;
   border: none;
-    border-radius: 10px;
+  border-radius: 4px;
+}
 
-  border-bottom: 4px solid #2f937f ;
+select {
+    border-radius: 4px;
+}
+
+.moveText {
+    border-radius: 4px;
+}
+
+.opt-div1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer{
+    height: 207px;
+    background-color: #ff7f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.Layer-2-footer{
+width: 133px;
+height: 22px;
+object-fit: contain;
+margin: 77px 534px 108px 533px;
+}
+
+h5{
+    color: white;
+    margin-top: -100px;
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: 100;
+}
+
+input[type=number] {
+    height: 30px;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 0 2px;
+    border-radius: 4px;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    cursor:pointer;
+    display:block;
+    width:4px;
+    color: #333;
+    text-align:center;
+    position:relative;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button { 
+    background: #eee url('http://i.stack.imgur.com/YYySO.png') no-repeat 50% 50%;  
+    width: 14px;
+    height: 14px;
+    padding: 4px;
+    position: relative;
+    right: 4px;
+    border-radius: 28px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 3.75px 0;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7.5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #FFA81E;
+    border-radius: 1.9px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1.2px solid #000000;
+    height: 15px;
+    width: 8px;
+    border-radius: 3px;
+    background: #FF981C;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3.95px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #F4811D;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 7.5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: rgba(255, 109, 27, 0.91);
+    border: 0.2px solid #010101;
+    border-radius: 3.8px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: rgba(255, 125, 53, 0.91);
+    border: 0.2px solid #010101;
+    border-radius: 3.8px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1.2px solid #000000;
+    height: 15px;
+    width: 8px;
+    border-radius: 3px;
+    background: #57483a;
+    cursor: pointer;
+    height: 7.5px;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: rgba(255, 125, 53, 0.91);
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: rgba(187, 187, 187, 0.91);
+  }
+
+  input[type=color]{
+	width: 30px;
+	height: 30px;
+	border: none;
+	border-radius: 40px;
+	background: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: solid 1px #F4811D;
+	border-radius: 40px;
 }

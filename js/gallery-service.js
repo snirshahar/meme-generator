@@ -43,11 +43,9 @@ function createKeyWords() {
 
 function saveImg(imgId) {
     saveToStorage('img', imgId)
-    // window.location.href = "canvas-editor.html";
 }
 
 function getImages() {
-
     return gImgs;
 }
 
@@ -63,11 +61,11 @@ function getImgsForDisplay() {
     })
     return filterImages;
 }
+
 function setNewSearchwWord(word) {
     if (!gKeywords[word]) gKeywords[word] = 1;
     else gKeywords[word]++;
     saveKeyWords()
-
 }
 
 function getKeyWords() {
@@ -80,4 +78,11 @@ function saveKeyWords() {
 
 function loadKeyWords() {
     return loadFromStorage('keyWords')
+}
+
+function setNewSearchwWord(word) {
+    if (!gKeywords[word]) gKeywords[word] = 1;
+    else gKeywords[word]++;
+    saveKeyWords()
+
 }

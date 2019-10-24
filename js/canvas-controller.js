@@ -13,15 +13,20 @@ function renderTxtsEditor() {
     var strHtml = gMeme.txts.map(function (txt, idx) {
         return `
                   <p>
-                  <button class="clear" onclick="switchLines()">Switch Lines</button>
-                  <br>
-                    <input type="text" data-property="line" placeholder="${txt.line}" oninput="editTxt(this,${idx})">
-                    <br><br>
-                    <input type="range" value="${txt.size}"  min="10" step="2" data-property="size" oninput="editTxt(this ,${idx})">
-                    <input type="color" value="${txt.color}" data-property="color" oninput="editTxt(this,${idx})">
-                   </i>
-                    <br> <br>
-                    <select data-property="font" oninput="editTxt(this,${idx})">
+                  <input type="text" data-property="line" placeholder="${txt.line}" oninput="editTxt(this,${idx})">
+                  <div class="opt-div1">
+                  <button class="" onclick="">Switch</button>
+                  <button  data-trans="addLine" class="btn"onclick="newTxtBtnClicked()">
+                  <i class="fas fa-plus"></i> Add Line
+                    </button>
+                    <button class="clear" onclick="clearCanvas()">Clear</button>
+                  </div>
+                  <br>Text Size: 
+                  <input type="range" value="${txt.size}"  min="10" step="2" data-property="size" oninput="editTxt(this ,${idx})">
+                  Text Color: 
+                  <input type="color" value="${txt.color}" data-property="color" oninput="editTxt(this,${idx})">
+                  <span>Text-Align:  </span>
+                  <select data-property="font" oninput="editTxt(this,${idx})">
                     <option value="${txt.font}">${txt.font}</option>
                     <option value="Arial">Arial</option>
                     <option value="Times New Roman">Times New Roman</option>
@@ -30,19 +35,23 @@ function renderTxtsEditor() {
                      <option value="Tahoma">Tahoma</option>
                     <option value="Geneva">Geneva</option>
                     </select>
-                     <br><br>
                     <p>
+                    Left-Right: 
                    <input class ="moveText" type="number" value="${txt.x}"  min="0" step="5" data-property="x" oninput="editTxt(this ,${idx})">
                    <br>
+                   Up-Down: 
                     <input class ="moveText" type="number" value="${txt.y}"  min="0" step="5" data-property="y" oninput="editTxt(this ,${idx})">
                     </p>
                    <br>
                       <select data-property="align" oninput="editTxt(this,${idx})">
+                      <option value="${txt.alignCenter}">Center</option>
                       <option value="${txt.alignLeft}">Right</option>
                       <option value="${txt.alignRight}">Left</option>
-                      <option value="${txt.alignCenter}">Center</option>
                      </select>
                     <br>
+                    <input type="file" class="custom-file-input" onchange="onFileInputChange(event)" />
+                    <button class="share"> <a href="#" class="share-btn" onclick="shareCanvas(this)">Share</a>
+                    </button>
                     </p>
                     <br>
                     `
@@ -88,17 +97,11 @@ function drawTxt(txt) {
     gCtx.fillText(txt.line, txt.x, txt.y);
 }
 
-// function newTxtBtnClicked() {
-//     gMeme.txts.push(createTxt('New Line', 150, 150));
-//     renderTxtsEditor();
-//     createCanvas()
-// }
-
-
-// inside the strHtml under the <br>
-//     <button  data-trans="addLine" class="btn"onclick="newTxtBtnClicked()">
-//  <i class="fas fa-plus"></i> Add Line
-//     </button>
+function newTxtBtnClicked() {
+    gMeme.txts.push(createTxt('New Line', 150, 150));
+    renderTxtsEditor();
+    createCanvas()
+}
 
 function downloadCanvas(elLink) {
     var data = canvas.toDataURL();
@@ -118,4 +121,8 @@ function renderCanvas(img) {
     canvas.width = img.width;
     canvas.height = img.height;
     gCtx.drawImage(img, 0, 0);
+}
+
+function onFileInputChange(ev) {
+    handleImageFromInput(ev, renderCanvas)
 }

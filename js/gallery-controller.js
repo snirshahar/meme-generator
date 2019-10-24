@@ -45,3 +45,17 @@ function onSetFilterByKeyword(txt) {
     setFilter(txt);
     renderImages();
 }
+
+function runScript(ev) {
+    if (ev.which == 13 || ev.keyCode == 13) {
+        ev.preventDefault();
+        onSearch()
+    }
+};
+
+function onSearch() {
+    var elWord = document.querySelector('input[type="text"]').value
+    setNewSearchwWord(elWord)
+    document.querySelector('input[type="text"]').value = ''
+    renderKeyWords();
+}
